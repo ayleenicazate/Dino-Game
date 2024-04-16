@@ -292,6 +292,17 @@
             }
         }
 
+        function GameOver() {
+            Estrellarse();
+            gameOver.style.display = "block";
+        }
+        
+        function Estrellarse() {
+    dino.classList.remove("dino-corriendo");
+    dino.classList.add("dino-estrellado");
+    parado = true;
+}
+
         function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft) {
     var aRect = a.getBoundingClientRect();
     var bRect = b.getBoundingClientRect();
